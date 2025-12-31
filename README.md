@@ -2,7 +2,7 @@
 
 ## 1. Giới thiệu đề tài
 Trong những năm gần đây, dữ liệu ngày càng gia tăng nhanh chóng, đặt ra nhu cầu cấp thiết về các phương pháp phân tích và dự đoán hiệu quả.  
-Dự án này tập trung giải quyết **bài toán [phân loại / hồi quy / nhận dạng / dự đoán]** bằng cách áp dụng các kỹ thuật **Machine Learning**.
+Dự án này tập trung giải quyết **bài toán phân loại ** bằng cách áp dụng các kỹ thuật **Machine Learning**.
 
 ### Mục tiêu đề tài
 - Xây dựng pipeline xử lý dữ liệu hoàn chỉnh
@@ -100,17 +100,34 @@ cd ML_basic
 pip install -r requirements.txt
 ```
 
-### 6.2 Train mô hình
+### 6.2 Training
 
 #### Logistic Regresion
 ```bash
-python app/train.py --model lr
+python app/train.py --model 'lr'
 ```
 #### SVM
 ```bash
-python app/train.py --model svm
+python app/train.py --model 'svm'
 ```
 #### Random Forest
 ```bash
-python app/train.py --model rf
+python app/train.py --model 'rf'
 ```
+
+### 6.3 Prediction
+```bash
+python app/predict.py --model 'app/checkpoints/{lr/svm/rf}.pkl' --input_path 'input.csv'
+```
+
+### 6.4 Demo
+```bash
+python demo/app.py
+```
+
+---
+
+## Tác giả 
+Họ và tên: Nguyễn Văn Đạt
+Mã sinh viên: 12423061
+Lớp: 12423TN
