@@ -17,8 +17,7 @@ Dự án này tập trung giải quyết **bài toán [phân loại / hồi quy 
 ### Nguồn dữ liệu
 - Tên dataset: **Churn Modelling**
 - Nguồn: **Kaggle**
-- Link tải:  
-  https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers
+- Link tải: https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers
 
 
 ### Mô tả dữ liệu
@@ -75,12 +74,12 @@ Dự án sử dụng các mô hình sau:
 - Confusion Matrix
 - Precision, Recall, F1-score
 
-### Kết quả minh họa
-| Model | Metric | Giá trị |
-|------|-------|--------|
-| Logistic Regression | Accuracy | 0.85 |
-| Decision Tree | Accuracy | 0.88 |
-| Random Forest | Accuracy | 0.91 |
+### Kết qủa sau khi xử lý mất cân bằng dữ liệu
+|  | Accuracy | Precision | Recall | F1-score |
+|---|----------|-----------|--------|----------|
+| Logistic Regression | 0.72 | 0.39 | 0.70 | 0.50 |
+| SVM | 0.79 | 0.49 | 0.71 | 0.58 |
+| Random Forest | 0.84 | 0.62 | 0.58 | 0.60 |
 
 ---
 
