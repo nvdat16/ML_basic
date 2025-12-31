@@ -20,11 +20,24 @@ Bài toán dự đoán sự hài lòng của khách hàng ngân hàng nhằm h�
 
 
 ### Mô tả dữ liệu
+- Bộ dữ liệu gồm 10000 bản ghi và 14 thuộc tính sau:
+
 | Tên cột | Kiểu dữ liệu | Mô tả |
 |-------|------------|------|
-| feature_1 | float | Mô tả |
-| feature_2 | int | Mô tả |
-| label | int | Nhãn |
+| RowNumber | int | Số thứ tự |
+| CustomerID | int | Mã khách hàng |
+| Surname | object | Họ khách hàng |
+| Creditscore | int | Điểm tín dụng |
+| Geography | object | Quốc gia |
+| Gender | object | Giới tính |
+| Age | int | Tuổi khách hàng |
+| Tenure | int | Số năm gắn bó với ngân hàng |
+| Balance | float | Số dư tài khoản trung bình |
+| NumOfProducts | int | Số lượng sản phẩm/dịch vụ đang sử dụng |
+| HashCrCard | int | Có thẻ tính dụng |
+| IsActiveMemer | int | Thành viên tích cực |
+| EstimatedSalary | float | Mức lương ước tính |
+| Exited | int | Rời bỏ ngân hàng (Nhãn dự đoán) |
 
 ---
 
