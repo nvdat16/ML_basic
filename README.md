@@ -1,8 +1,7 @@
 # Dự đoán sự hài lòng của khách hàng ngân hàng
 
 ## 1. Giới thiệu đề tài
-Trong những năm gần đây, dữ liệu ngày càng gia tăng nhanh chóng, đặt ra nhu cầu cấp thiết về các phương pháp phân tích và dự đoán hiệu quả.  
-Dự án này tập trung giải quyết **bài toán phân loại ** bằng cách áp dụng các kỹ thuật **Machine Learning**.
+Trong những năm gần đây, dữ liệu ngày càng gia tăng nhanh chóng, đặt ra nhu cầu cấp thiết về các phương pháp phân tích và dự đoán hiệu quả. Dự án này tập trung giải quyết bài toán phân loại bằng cách áp dụng các kỹ thuật **Machine Learning**.
 
 ### Mục tiêu đề tài
 - Xây dựng pipeline xử lý dữ liệu hoàn chỉnh
@@ -77,9 +76,9 @@ Dự án sử dụng các mô hình sau:
 ### Kết quả trước khi xử lý mất cân bằng dữ liệu
 | Model | Accuracy | Precision | Recall | F1-score |
 |---|----------|-----------|--------|----------|
-| Logistic Regression | 0.72 | 0.39 | 0.70 | 0.50 |
-| SVM | 0.79 | 0.49 | 0.71 | 0.58 |
-| Random Forest | 0.84 | 0.62 | 0.58 | 0.60 |
+| Logistic Regression | 0.81 | 0.59 | 0.19 | 0.28 |
+| SVM | 0.86 | 0.85 | 0.39 | 0.54 |
+| Random Forest | 0.86 | 0.77 | 0.45 | 0.57 |
 
 ### Kết quả sau khi xử lý mất cân bằng dữ liệu
 | Model | Accuracy | Precision | Recall | F1-score |
@@ -128,6 +127,6 @@ python demo/app.py
 ---
 
 ## Tác giả 
-Họ và tên: Nguyễn Văn Đạt
-Mã sinh viên: 12423061
-Lớp: 12423TN
+- Họ và tên: Nguyễn Văn Đạt
+- Mã sinh viên: 12423061
+- Lớp: 12423TN
