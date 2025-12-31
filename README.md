@@ -1,7 +1,7 @@
 # Dự đoán sự hài lòng của khách hàng ngân hàng
 
 ## 1. Giới thiệu đề tài
-Trong những năm gần đây, dữ liệu ngày càng gia tăng nhanh chóng, đặt ra nhu cầu cấp thiết về các phương pháp phân tích và dự đoán hiệu quả. Dự án này tập trung giải quyết bài toán phân loại bằng cách áp dụng các kỹ thuật **Machine Learning**.
+Bài toán dự đoán sự hài lòng của khách hàng ngân hàng nhằm hỗ trợ các tổ chức tài chính hiểu rõ hơn hành vi và mức độ hài lòng của khách hàng đối với các sản phẩm, dịch vụ ngân hàng. Mục tiêu của bài toán là áp dụng các kỹ thuật học máy để dự đoán sớm mức độ hài lòng của khách hàng dựa trên các thông tin thu thập được. Từ đó, ngân hàng có thể chủ động cải thiện chất lượng dịch vụ, xây dựng các chiến lược chăm sóc khách hàng phù hợp và nâng cao khả năng giữ chân khách hàng.
 
 ### Mục tiêu đề tài
 - Xây dựng pipeline xử lý dữ liệu hoàn chỉnh
