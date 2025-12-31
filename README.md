@@ -74,8 +74,15 @@ Dự án sử dụng các mô hình sau:
 - Confusion Matrix
 - Precision, Recall, F1-score
 
-### Kết qủa sau khi xử lý mất cân bằng dữ liệu
-|  | Accuracy | Precision | Recall | F1-score |
+### Kết quả trước khi xử lý mất cân bằng dữ liệu
+| Model | Accuracy | Precision | Recall | F1-score |
+|---|----------|-----------|--------|----------|
+| Logistic Regression | 0.72 | 0.39 | 0.70 | 0.50 |
+| SVM | 0.79 | 0.49 | 0.71 | 0.58 |
+| Random Forest | 0.84 | 0.62 | 0.58 | 0.60 |
+
+### Kết quả sau khi xử lý mất cân bằng dữ liệu
+| Model | Accuracy | Precision | Recall | F1-score |
 |---|----------|-----------|--------|----------|
 | Logistic Regression | 0.72 | 0.39 | 0.70 | 0.50 |
 | SVM | 0.79 | 0.49 | 0.71 | 0.58 |
@@ -88,7 +95,20 @@ Dự án sử dụng các mô hình sau:
 ### 6.1 Cài đặt môi trường
 
 ```bash
-git clone https://github.com/username/project-name.git
-cd project-name
+git clone https://github.com/nvdat16/ML_basic.git
+cd ML_basic
 pip install -r requirements.txt
 
+### 6.2 Train mô hình
+
+#### Logistic Regresion
+```bash
+python app/train.py --model lr
+
+#### SVM
+```bash
+python app/train.py --model svm
+
+#### Random Forest
+```bash
+python app/train.py --model rf
