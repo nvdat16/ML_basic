@@ -134,7 +134,7 @@ python app/predict.py --model 'app/checkpoints/{lr/svm/rf}.pkl' --input_path 'in
 
 ### 6.4 Demo
 ```bash
-python demo/app.py
+streamlit run demo/app.py
 ```
 
 ---
