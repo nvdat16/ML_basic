@@ -98,17 +98,19 @@ Dự án sử dụng các mô hình sau:
 git clone https://github.com/nvdat16/ML_basic.git
 cd ML_basic
 pip install -r requirements.txt
+```
 
 ### 6.2 Train mô hình
 
 #### Logistic Regresion
 ```bash
 python app/train.py --model lr
-
+```
 #### SVM
 ```bash
 python app/train.py --model svm
-
+```
 #### Random Forest
 ```bash
 python app/train.py --model rf
+```
