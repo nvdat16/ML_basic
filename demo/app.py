@@ -6,11 +6,10 @@ import joblib
 st.set_page_config(page_title="Demo", layout="centered")
 
 # Tải Mô hình và các thành phần tiền xử lý
-model = joblib.load('svm.pkl')
-scaler = joblib.load('scaler.pkl')
+model = joblib.load('/Users/admin/Documents/MachineLearning/BTL/demo/model.pkl')
 
 # Xây dựng Giao diện Người dùng (Input Sidebar)
-st.title('Ứng dụng dự đoán độ hài lòng của khách hàng')
+st.title('Dự đoán mức độ hài lòng')
 st.markdown('### Nhập thông tin khách hàng để dự đoán')
 
 # Sử dụng Sidebar để giữ cho giao diện chính gọn gàng
@@ -82,8 +81,7 @@ is_active_member = st.sidebar.selectbox(
 )
 
 if st.button('Dự đoán Rủi ro'):
-    
-    # Tạo DataFrame từ đầu vào
+
     data = {
         'CreditScore': credit_score,
         'Geography': geography,
@@ -96,30 +94,16 @@ if st.button('Dự đoán Rủi ro'):
         'IsActiveMember': is_active_member,
         'EstimatedSalary': estimated_salary
     }
-    
+
     input_df = pd.DataFrame([data])
-    
+
     st.subheader('Dữ liệu khách hàng')
     st.dataframe(input_df, hide_index=True)
 
-    # Chuẩn hóa (Scaling) dữ liệu số liệu
-    numerical_cols = ['CreditScore',  'Age', 'Tenure', 'Balance','NumOfProducts','EstimatedSalary']
-    df_num_raw = input_df[numerical_cols]
-    scaled_data = scaler.transform(df_num_raw)
-    df_num_scaled = pd.DataFrame(scaled_data, columns=numerical_cols)
-
-    # Mã hóa (Encoding) dữ liệu phân loại
-    input_df['Gender'] = input_df['Gender'].map({'Male': 1, 'Female': 0})
-    input_df['Geography'] = input_df['Geography'].map({'France': 0, 'Spain': 2, 'Germany': 1})
-    categorical_cols = ['HasCrCard', 'IsActiveMember','Geography', 'Gender']
-    df_cat_encoded = input_df[categorical_cols]
-
-    # Ghép nối dữ liệu
-    final_df = pd.concat([df_num_scaled, df_cat_encoded], axis=1)
-    features = final_df.values 
-        
-    # Dự đoán xác suất
-    predict = model.predict(features)
+    predict = model.predict(input_df)
+    prob = model.predict_proba(input_df)[:, 1]
 
     st.markdown('---')
-    st.subheader(f'Kết quả dự đoán: {predict}')
+    st.subheader('Kết quả dự đoán')
+    st.write(f'=> Dự đoán: {predict[0]}')
+    st.write(f'=> Xác suất rời bỏ: {prob[0]:.2%}')
